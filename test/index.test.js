@@ -19,7 +19,7 @@ it('should inject router prop', () => {
     expect(MyComponent).toHaveBeenCalledWith(props, ref);
 });
 
-it('should forward other props prop', () => {
+it('should forward other props', () => {
     const MyComponent = jest.fn(() => 'Hello');
     const EnhancedMyComponent = withRouterRef(MyComponent);
 
