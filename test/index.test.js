@@ -6,7 +6,6 @@ jest.mock('next/router', () => ({
     useRouter: () => ({ foo: 'bar' }),
 }));
 
-
 it('should inject router prop', () => {
     const MyComponent = jest.fn(() => 'Hello');
     const EnhancedMyComponent = withRouterRef(MyComponent);
