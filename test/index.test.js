@@ -3,12 +3,8 @@ import { render } from '@testing-library/react';
 import withRouterRef from '../src';
 
 jest.mock('next/router', () => ({
-    useRouter: jest.fn(() => ({ foo: 'bar' })),
+    useRouter: () => ({ foo: 'bar' }),
 }));
-
-afterEach(() => {
-    jest.clearAllMocks();
-});
 
 it('should inject router prop', () => {
     const MyComponent = jest.fn(() => 'Hello');
@@ -22,7 +18,7 @@ it('should inject router prop', () => {
     expect(MyComponent).toHaveBeenCalledWith(props, ref);
 });
 
-it('should forward other props prop', () => {
+it('should forward other props', () => {
     const MyComponent = jest.fn(() => 'Hello');
     const EnhancedMyComponent = withRouterRef(MyComponent);
 
