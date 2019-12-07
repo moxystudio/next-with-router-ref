@@ -14,7 +14,7 @@
 [david-dm-dev-url]:https://david-dm.org/moxystudio/next-with-router-ref?type=dev
 [david-dm-dev-image]:https://img.shields.io/david/dev/moxystudio/next-with-router-ref.svg
 
-An alterntive to Next.js `withRouter` HOC [that supports refs](https://github.com/zeit/next.js/issues/9528) by forwarding them.
+An alternative to Next.js `withRouter` HOC [that supports refs](https://github.com/zeit/next.js/issues/9528) by forwarding them.
 
 
 ## Installation
@@ -48,7 +48,7 @@ export default withRouterRef(MyComponent);
 ...and then refs work as you would expect:
 
 ```js
-import React, { Component } from 'react';
+import React, { useRef } from 'react';
 import MyComponent from 'path/to/my-component';
 
 const MyParentComponent = () => {
